@@ -50,7 +50,7 @@ export default function FAQ() {
             onClick={() => handleClick(index)}
           >
             <button
-              className={`flex w-full cursor-pointer items-center gap-2 p-3 px-2 text-xs font-semibold text-black transition-all dark:text-white sm:text-base`}
+              className={`flex w-full cursor-pointer items-center gap-2 p-3 px-2 font-merriweather text-xs font-semibold text-black transition-all dark:text-white sm:text-base`}
             >
               <Plus
                 className={`${

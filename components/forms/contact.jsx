@@ -5,6 +5,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { cn } from "@/lib/utils";
 
 export default function ContactUsForm() {
   const {
@@ -29,11 +30,12 @@ export default function ContactUsForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="space-y-8 rounded-3xl bg-primary-100 p-12">
+      <div className="space-y-8 rounded-3xl bg-primary-100 p-8 lg:p-12">
         <div className="grid grid-cols-2 gap-8">
           {/* firstname */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <Input
+              type="text"
               placeholder="Enter first name*"
               {...register("firstname", { required: "required*" })}
               className={inputClassname}
@@ -44,8 +46,9 @@ export default function ContactUsForm() {
           </div>
 
           {/* lastname */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <Input
+              type="text"
               placeholder="Enter last name"
               {...register("lastname")}
               className={inputClassname}
@@ -55,6 +58,7 @@ export default function ContactUsForm() {
           {/* email */}
           <div className="col-span-2">
             <Input
+              type="email"
               placeholder="Enter your email*"
               {...register("email", { required: "required*" })}
               className={inputClassname}
@@ -69,7 +73,7 @@ export default function ContactUsForm() {
             <Textarea
               placeholder="Enter message*"
               {...register("message", { required: "required*" })}
-              className={inputClassname}
+              className={cn(inputClassname, "h-[150px] rounded-3xl")}
             />
             {errors.message && (
               <span className="text-red-500">{errors.message.message}</span>
@@ -78,7 +82,7 @@ export default function ContactUsForm() {
         </div>
 
         <div className="text-center">
-          <Button className="w-64 rounded-full bg-secondary py-7">
+          <Button className="w-full rounded-full bg-secondary py-7 md:w-64">
             Send message
           </Button>
         </div>

@@ -5,7 +5,7 @@ import ContactUsForm from "./forms/contact";
 
 export default function ContactSection() {
   return (
-    <section>
+    <section className="bg-white">
       <div className="container grid grid-cols-6 gap-8 py-24">
         <div className="col-span-6 space-y-10 md:col-span-3">
           <div className="space-y-4">
@@ -22,29 +22,39 @@ export default function ContactSection() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 gap-y-6">
-            <div>
-              <H5>Chat to us</H5>
-              <Muted className="text-sm">
+            <div className="space-y-1">
+              <H5 className={"text-secondary"}>Chat to us</H5>
+              <Muted className="text-xs sm:text-sm">
                 Our friendly team is here to help
               </Muted>
-              <p className="text-sm font-medium">team@gmail.com</p>
+              <p className="text-xs font-medium text-secondary sm:text-sm">
+                team@gmail.com
+              </p>
             </div>
-            <div>
-              <H5>Call us</H5>
-              <Muted className="text-sm">toll-free call</Muted>
-              <p className="text-sm font-medium">1800 999 999</p>
+            <div className="space-y-1">
+              <H5 className={"text-secondary"}>Call us</H5>
+              <Muted className="text-xs sm:text-sm">toll-free call</Muted>
+              <p className="text-xs font-medium text-secondary sm:text-sm">
+                1800 999 999
+              </p>
             </div>
-            <div>
-              <H5>Visit us</H5>
-              <Muted className="text-sm">Come say hello at our office</Muted>
-              <p className="text-sm font-medium">
+            <div className="space-y-1">
+              <H5 className={"text-secondary"}>Visit us</H5>
+              <Muted className="text-xs sm:text-sm">
+                Come say hello at our office
+              </Muted>
+              <p className="text-xs font-medium text-secondary sm:text-sm">
                 Lorem ipsum, dolor sit amet, 121009
               </p>
             </div>
-            <div>
-              <H5>Hours</H5>
-              <Muted className="text-sm">Manday-Friday 9am-5pm</Muted>
-              <p className="text-sm font-medium">team@gmail.com</p>
+            <div className="space-y-1">
+              <H5 className={"text-secondary"}>Hours</H5>
+              <Muted className="text-xs sm:text-sm">
+                Manday-Friday 9am-5pm
+              </Muted>
+              <p className="text-xs font-medium text-secondary sm:text-sm">
+                team@gmail.com
+              </p>
             </div>
           </div>
         </div>

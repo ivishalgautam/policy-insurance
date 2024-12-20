@@ -10,11 +10,11 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-4 pt-8">
+    <footer className="bg-primary-100 py-4 pt-8">
       <div className="container space-y-4">
         <div className="grid gap-8 lg:grid-cols-12">
-          <div className="col-span-4 rounded-3xl bg-slate-800 p-8"></div>
-          <div className="col-span-8 rounded-3xl bg-slate-800 p-8">
+          <div className="col-span-4 rounded-3xl bg-secondary p-8"></div>
+          <div className="col-span-8 rounded-3xl bg-secondary p-8">
             <div className="items-start justify-between space-y-8 sm:flex sm:space-y-0">
               <div className="space-y-3">
                 <Logo className={"text-white"} />
@@ -57,7 +57,7 @@ function Socials() {
             className="size-8 rounded-full bg-white hover:bg-white"
             key={key}
           >
-            <Item className="text-slate-800" />
+            <Item className="text-secondary" />
           </Button>
         ),
       )}

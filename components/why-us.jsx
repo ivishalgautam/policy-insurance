@@ -3,6 +3,7 @@ import { H3, H6, Small } from "./ui/typography";
 import { HovermeButton } from "./ui/hover-me-button";
 import Heading from "./heading";
 import FadeUp from "./fade-up";
+import Balancer from "react-wrap-balancer";
 
 export default function WhyUs() {
   return (
@@ -10,18 +11,20 @@ export default function WhyUs() {
       <div className="container space-y-16 text-white">
         <H3 className={"font-merriweather"}>Why Us?</H3>
 
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-8">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
           {Array.from({ length: 3 }).map((_, key) => (
             <FadeUp key={key} y={20} delay={key * 0.2}>
-              <div className="space-y-6">
+              <div className="space-y-2 md:space-y-6">
                 <Small className={"font-medium text-white/70"}>
                   Simplicity
                 </Small>
                 <Heading text={"Lorem ipsum dolor sit amet consectetur."} />
                 <p className="text-sm text-white/70">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Doloremque ea dicta dolorem! Animi quibusdam aliquid nostrum
-                  placeat a ducimus cumque?
+                  <Balancer>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Doloremque ea dicta dolorem! Animi quibusdam aliquid nostrum
+                    placeat a ducimus cumque?
+                  </Balancer>
                 </p>
               </div>
             </FadeUp>

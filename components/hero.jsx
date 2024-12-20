@@ -6,10 +6,11 @@ import { MoveUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logos } from "./logo-marquee";
 import FadeUp from "./fade-up";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center pt-32">
+    <section className="flex items-center justify-center pt-10">
       <div className="container min-h-screen w-full space-y-16">
         <div>
           <h1 className="text-center font-merriweather text-4xl font-extrabold tracking-wide lg:text-6xl">
@@ -23,20 +24,22 @@ export default function Hero() {
 
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-full md:col-span-6 lg:col-span-4">
-            <FadeUp x={-20}>
-              <Card bgGradient>
-                <figure className="h-[466px] overflow-hidden rounded-3xl">
-                  <Image
-                    src={"/images/banner/1.webp"}
-                    width={200}
-                    height={200}
-                    alt=""
-                    className="h-full w-full object-cover object-center grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
-                    priority
-                  />
-                </figure>
-              </Card>
-            </FadeUp>
+            <Link href={"/insurance"}>
+              <FadeUp x={-20}>
+                <Card bgGradient>
+                  <figure className="h-[466px] overflow-hidden rounded-3xl">
+                    <Image
+                      src={"/images/banner/1.webp"}
+                      width={200}
+                      height={200}
+                      alt=""
+                      className="h-full w-full object-cover object-center grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
+                      priority
+                    />
+                  </figure>
+                </Card>
+              </FadeUp>
+            </Link>
           </div>
 
           <FadeUp
@@ -60,20 +63,22 @@ export default function Hero() {
             </div>
           </FadeUp>
           <div className="col-span-full md:col-span-6 lg:col-span-4">
-            <FadeUp x={20}>
-              <Card bgGradient>
-                <figure className="h-[466px] overflow-hidden rounded-3xl">
-                  <Image
-                    src={"/images/banner/2.jpeg"}
-                    width={200}
-                    height={200}
-                    alt=""
-                    className="h-full w-full object-cover object-center grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
-                    priority
-                  />
-                </figure>
-              </Card>
-            </FadeUp>
+            <Link href={"/insurance"}>
+              <FadeUp x={20}>
+                <Card bgGradient>
+                  <figure className="h-[466px] overflow-hidden rounded-3xl">
+                    <Image
+                      src={"/images/banner/2.jpeg"}
+                      width={200}
+                      height={200}
+                      alt=""
+                      className="h-full w-full object-cover object-center grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
+                      priority
+                    />
+                  </figure>
+                </Card>
+              </FadeUp>
+            </Link>
           </div>
         </div>
 

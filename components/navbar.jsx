@@ -11,6 +11,7 @@ import {
 } from "./ui/sheet";
 import { HovermeButton } from "./ui/hover-me-button";
 import Logo from "./logo";
+import NavigationTabs from "./navigation-tabs";
 
 export const navList = [
   {
@@ -29,16 +30,12 @@ export const navList = [
 
 export default function Navbar() {
   return (
-    <header className="py-6">
+    <header className="bg-primary-300 py-6">
       <div className="container">
         <div className="flex items-center justify-between gap-4 md:gap-12">
           <Logo />
           <nav className="hidden items-center justify-start text-sm lg:flex lg:gap-8 lg:text-base">
-            {navList.map((list, key) => (
-              <Link href={list.href} key={key}>
-                {list.label}
-              </Link>
-            ))}
+            <NavigationTabs />
           </nav>
           <div className="ml-auto hidden sm:block">
             <CTA />

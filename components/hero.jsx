@@ -4,67 +4,80 @@ import Balancer from "react-wrap-balancer";
 import Image from "next/image";
 import { MoveUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Logos } from "./logo-marquee";
+import FadeUp from "./fade-up";
 
 export default function Hero() {
   return (
-    <section className="flex items-center justify-center bg-primary/20 pt-32">
+    <section className="flex items-center justify-center pt-32">
       <div className="container min-h-screen w-full space-y-16">
         <div>
-          <Balancer>
-            <h1 className="text-center text-4xl font-extrabold tracking-wide lg:text-6xl">
+          <h1 className="text-center font-merriweather text-4xl font-extrabold tracking-wide lg:text-6xl">
+            <Balancer>
               Empower Your <UnderlineWord>Future</UnderlineWord> with Smart
               &nbsp;
               <UnderlineWord>Investments</UnderlineWord>
-            </h1>
-          </Balancer>
+            </Balancer>
+          </h1>
         </div>
 
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-full md:col-span-6 lg:col-span-4">
-            <Card bgGradient>
-              <figure className="h-[466px] overflow-hidden rounded-3xl">
-                <Image
-                  src={"/images/banner/1.webp"}
-                  width={200}
-                  height={200}
-                  alt=""
-                  className="h-full w-full object-cover object-center grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
-                />
-              </figure>
-            </Card>
+            <FadeUp x={-20}>
+              <Card bgGradient>
+                <figure className="h-[466px] overflow-hidden rounded-3xl">
+                  <Image
+                    src={"/images/banner/1.webp"}
+                    width={200}
+                    height={200}
+                    alt=""
+                    className="h-full w-full object-cover object-center grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
+                  />
+                </figure>
+              </Card>
+            </FadeUp>
           </div>
 
-          <div className="order-first col-span-full grid h-auto min-h-44 grid-cols-12 gap-6 md:col-span-12 lg:order-none lg:col-span-4">
-            <div className="col-span-12 flex w-full items-center justify-center rounded-3xl bg-primary/50 md:col-span-4 lg:col-span-12">
+          <FadeUp
+            y={20}
+            className="order-first col-span-full grid h-auto min-h-44 grid-cols-12 gap-6 md:col-span-12 lg:order-none lg:col-span-4"
+          >
+            <div className="col-span-12 flex w-full items-center justify-center rounded-3xl bg-primary-500 md:col-span-4 lg:col-span-12">
               <Card arrowPosition={"bottom-right"}>
-                <div className="flex h-full items-center p-4 text-start text-2xl font-bold lg:text-4xl">
+                <div className="flex h-full items-center p-4 text-start text-2xl font-bold lg:text-3xl">
                   Transform Your Finances—The Journey Begins Now!
                 </div>
               </Card>
             </div>
 
-            <div className="col-span-12 w-full rounded-3xl bg-primary/50 md:col-span-8 lg:col-span-12">
+            <div className="col-span-12 w-full rounded-3xl bg-primary-500 md:col-span-8 lg:col-span-12">
               <Card arrowPosition={"bottom-right"}>
-                <div className="flex h-full items-center p-4 text-start text-2xl font-bold lg:text-4xl">
+                <div className="flex h-full items-center p-4 text-start text-2xl font-bold lg:text-3xl">
                   Empower Your Future: Financial Prosperity Starts Here
                 </div>
               </Card>
             </div>
-          </div>
-
+          </FadeUp>
           <div className="col-span-full md:col-span-6 lg:col-span-4">
-            <Card bgGradient>
-              <figure className="h-[466px] overflow-hidden rounded-3xl">
-                <Image
-                  src={"/images/banner/2.jpeg"}
-                  width={200}
-                  height={200}
-                  alt=""
-                  className="h-full w-full object-cover object-center grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
-                />
-              </figure>
-            </Card>
+            <FadeUp x={20}>
+              <Card bgGradient>
+                <figure className="h-[466px] overflow-hidden rounded-3xl">
+                  <Image
+                    src={"/images/banner/2.jpeg"}
+                    width={200}
+                    height={200}
+                    alt=""
+                    className="h-full w-full object-cover object-center grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
+                  />
+                </figure>
+              </Card>
+            </FadeUp>
           </div>
+        </div>
+
+        {/*  logo marquee*/}
+        <div>
+          <Logos />
         </div>
       </div>
     </section>

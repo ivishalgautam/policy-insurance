@@ -1,7 +1,6 @@
 "use client";
-import { Handshake, Menu, MoveRight, Smartphone } from "lucide-react";
+import { Menu } from "lucide-react";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import {
   Sheet,
   SheetContent,
@@ -11,6 +10,7 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 import { HovermeButton } from "./ui/hover-me-button";
+import Logo from "./logo";
 
 export const navList = [
   {
@@ -32,10 +32,7 @@ export default function Navbar() {
     <header className="py-6">
       <div className="container">
         <div className="flex items-center justify-between gap-4 md:gap-12">
-          <div className="inline-flex items-center gap-2">
-            <Handshake className="text-primary" size={30} />
-            <span className="text-2xl font-extrabold">onePolicy</span>
-          </div>
+          <Logo />
           <nav className="hidden items-center justify-start text-sm lg:flex lg:gap-8 lg:text-base">
             {navList.map((list, key) => (
               <Link href={list.href} key={key}>

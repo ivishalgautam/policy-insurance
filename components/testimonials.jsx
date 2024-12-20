@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Marquee } from "@/components/ui/marquee";
 import { TestimonialCard } from "./cards/testimonial";
-import { testimonials } from "@/data/testimonials";
+import { testimonials } from "@/data/data";
 
 export function Testimonials() {
   return (

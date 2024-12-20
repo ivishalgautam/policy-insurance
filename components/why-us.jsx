@@ -4,6 +4,7 @@ import { HovermeButton } from "./ui/hover-me-button";
 import Heading from "./heading";
 import FadeUp from "./fade-up";
 import Balancer from "react-wrap-balancer";
+import { whyChooseUs } from "@/data/data";
 
 export default function WhyUs() {
   return (
@@ -11,20 +12,18 @@ export default function WhyUs() {
       <div className="container space-y-16 text-white">
         <H3 className={"font-merriweather"}>Why Us?</H3>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-          {Array.from({ length: 3 }).map((_, key) => (
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12">
+          {whyChooseUs.map((item, key) => (
             <FadeUp key={key} y={20} delay={key * 0.2}>
               <div className="space-y-2 md:space-y-6">
-                <Small className={"font-medium text-white/70"}>
-                  Simplicity
+                <Small
+                  className={"font-merriweather font-medium text-white/70"}
+                >
+                  {item.subheading}
                 </Small>
-                <Heading text={"Lorem ipsum dolor sit amet consectetur."} />
+                <Heading text={item.heading} />
                 <p className="text-sm text-white/70">
-                  <Balancer>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Doloremque ea dicta dolorem! Animi quibusdam aliquid nostrum
-                    placeat a ducimus cumque?
-                  </Balancer>
+                  <Balancer>{item.paragraph}</Balancer>
                 </p>
               </div>
             </FadeUp>

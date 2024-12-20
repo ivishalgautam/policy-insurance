@@ -146,3 +146,24 @@ export const testimonials = [
     ),
   },
 ];
+
+export const whyChooseUs = [
+  {
+    heading: "Why Trust Us for Your Insurance Solutions",
+    subheading: "Reliability",
+    paragraph:
+      "Choose us for reliable coverage that protects your future. Our expert team offers customized insurance options, ensuring security and peace of mind at every stage of life.",
+  },
+  {
+    heading: "Your Partner in Financial Protection",
+    subheading: "Commitment",
+    paragraph:
+      "With a strong commitment to your security, we provide affordable and comprehensive insurance plans. Our team ensures that your needs are met with tailored coverage for long-term protection.",
+  },
+  {
+    heading: "Insurance Made Simple and Secure",
+    subheading: "Expertise",
+    paragraph:
+      "Backed by years of expertise, we offer simple, transparent, and effective insurance solutions. Our focus is on delivering the right coverage to suit your unique needs with ease.",
+  },
+];

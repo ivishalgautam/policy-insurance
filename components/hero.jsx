@@ -32,6 +32,7 @@ export default function Hero() {
                     height={200}
                     alt=""
                     className="h-full w-full object-cover object-center grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
+                    priority
                   />
                 </figure>
               </Card>
@@ -68,6 +69,7 @@ export default function Hero() {
                     height={200}
                     alt=""
                     className="h-full w-full object-cover object-center grayscale transition-all duration-300 group-hover:scale-110 group-hover:grayscale-0"
+                    priority
                   />
                 </figure>
               </Card>

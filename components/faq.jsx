@@ -37,7 +37,7 @@ export default function FAQ() {
   };
   return (
     <>
-      <h2 className="mb-4 font-merriweather text-2xl font-bold">
+      <h2 className="mb-4 text-center font-merriweather text-2xl font-bold">
         Frequently Asked Questions
       </h2>
       <div className="h-fit rounded-lg border bg-white p-2 dark:bg-[#111111]">

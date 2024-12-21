@@ -1,30 +1,25 @@
 import dynamic from "next/dynamic";
-const ContactSection = dynamic(() => import("@/components/contact-section"), {
-  loading: () => "loading...",
-  ssr: false,
-});
-const FAQ = dynamic(() => import("@/components/faq"), {
-  loading: () => "loading...",
-  ssr: false,
-});
+import HeroSkeleton from "./skeletons/hero";
 const Hero = dynamic(() => import("@/components/hero"), {
-  loading: () => "loading...",
-  ssr: false,
+  loading: () => <HeroSkeleton />,
 });
 const Insurances = dynamic(() => import("@/components/insurances"), {
   loading: () => "loading...",
-  ssr: false,
+});
+const WhyUs = dynamic(() => import("@/components/why-us"), {
+  loading: () => "loading...",
 });
 const Testimonials = dynamic(
   () => import("@/components/testimonials").then((data) => data.Testimonials),
   {
     loading: () => "loading...",
-    ssr: false,
   },
 );
-const WhyUs = dynamic(() => import("@/components/why-us"), {
+const ContactSection = dynamic(() => import("@/components/contact-section"), {
   loading: () => "loading...",
-  ssr: false,
+});
+const FAQ = dynamic(() => import("@/components/faq"), {
+  loading: () => "loading...",
 });
 
 export default function Home() {

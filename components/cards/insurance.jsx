@@ -16,20 +16,19 @@ export default function InsuranceCard({
     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius, corporis. Voluptatum eum velit dolorum mollitia nemo cupiditate illum ",
   ],
   imgUrl,
-  order = "",
   className = "",
 }) {
   return (
     <div
       className={cn(
-        "mx-auto max-w-6xl items-center justify-center gap-8 space-y-10 md:flex lg:space-y-0",
+        "mx-auto max-w-6xl items-center justify-center gap-8 space-y-10 text-center md:flex md:text-start lg:space-y-0",
         className,
       )}
     >
       <FadeUp x={-20} className="flex-2 lg:flex-1">
         <div>
           <div className="space-y-6">
-            <div className="flex items-center justify-start gap-2">
+            <div className="flex items-center justify-center gap-2 md:justify-start">
               <FaPlusSquare className="text-primary" size={30} />
               <Muted className={"text-xs sm:text-sm"}>{small}</Muted>
             </div>
@@ -45,9 +44,9 @@ export default function InsuranceCard({
         </div>
       </FadeUp>
 
-      <FadeUp x={20} className="flex-1">
+      <FadeUp x={20} className="flex-2 lg:flex-1">
         <div className={cn("flex items-center lg:justify-center")}>
-          <figure className="size-[300px] overflow-hidden rounded-2xl lg:size-[400px]">
+          <figure className="mx-auto size-[300px] overflow-hidden rounded-2xl md:mx-0 lg:size-[400px]">
             <Image
               src={imgUrl}
               width={400}

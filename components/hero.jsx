@@ -13,7 +13,7 @@ export default function Hero() {
     <section className="flex items-center justify-center pt-10">
       <div className="container min-h-screen w-full space-y-16">
         <div>
-          <h1 className="text-center font-merriweather text-4xl font-extrabold tracking-wide lg:text-6xl">
+          <h1 className="text-center font-merriweather text-3xl font-extrabold tracking-wide sm:text-4xl lg:text-6xl">
             <Balancer>
               Empower Your <UnderlineWord>Future</UnderlineWord> with Smart
               &nbsp;
@@ -23,11 +23,11 @@ export default function Hero() {
         </div>
 
         <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-full md:col-span-6 lg:col-span-4">
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <Link href={"/insurance"}>
               <FadeUp x={-20}>
                 <Card bgGradient>
-                  <figure className="h-[466px] overflow-hidden rounded-3xl">
+                  <figure className="max-h-[466px] overflow-hidden rounded-3xl">
                     <Image
                       src={"/images/banner/1.webp"}
                       width={200}
@@ -43,8 +43,8 @@ export default function Hero() {
           </div>
 
           <FadeUp
-            y={20}
             className="order-first col-span-full grid h-auto min-h-44 grid-cols-12 gap-6 md:col-span-12 lg:order-none lg:col-span-4"
+            y={20}
           >
             <div className="col-span-12 flex w-full items-center justify-center rounded-3xl bg-primary-500 md:col-span-4 lg:col-span-12">
               <Card arrowPosition={"bottom-right"}>
@@ -62,11 +62,12 @@ export default function Hero() {
               </Card>
             </div>
           </FadeUp>
-          <div className="col-span-full md:col-span-6 lg:col-span-4">
+
+          <div className="col-span-12 md:col-span-6 lg:col-span-4">
             <Link href={"/insurance"}>
               <FadeUp x={20}>
                 <Card bgGradient>
-                  <figure className="h-[466px] overflow-hidden rounded-3xl">
+                  <figure className="max-h-[466px] overflow-hidden rounded-3xl">
                     <Image
                       src={"/images/banner/2.jpeg"}
                       width={200}
@@ -83,9 +84,7 @@ export default function Hero() {
         </div>
 
         {/*  logo marquee*/}
-        <div>
-          <Logos />
-        </div>
+        <Logos />
       </div>
     </section>
   );

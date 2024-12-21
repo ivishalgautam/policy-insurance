@@ -10,12 +10,14 @@ export default function WhyUs() {
   return (
     <section className="bg-[#463861] py-16">
       <div className="container space-y-16 text-white">
-        <H3 className={"font-merriweather"}>Why Us?</H3>
+        <H3 className={"text-center font-merriweather sm:text-start"}>
+          Why Us?
+        </H3>
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-12">
           {whyChooseUs.map((item, key) => (
             <FadeUp key={key} y={20} delay={key * 0.2}>
-              <div className="space-y-2 md:space-y-6">
+              <div className="space-y-2 text-center sm:text-start md:space-y-6">
                 <Small
                   className={"font-merriweather font-medium text-white/70"}
                 >
@@ -29,7 +31,7 @@ export default function WhyUs() {
             </FadeUp>
           ))}
         </div>
-        <FadeUp y={20}>
+        <FadeUp y={20} className="text-center sm:text-start">
           <HovermeButton text="GET A QUOTE" />
         </FadeUp>
       </div>

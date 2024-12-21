@@ -2,26 +2,31 @@ import React from "react";
 import Heading from "./heading";
 import { H5, Muted } from "./ui/typography";
 import ContactUsForm from "./forms/contact";
+import Balancer from "react-wrap-balancer";
 
 export default function ContactSection() {
   return (
     <section className="bg-white">
       <div className="container grid grid-cols-6 gap-8 py-24">
         <div className="col-span-6 space-y-10 md:col-span-3">
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-start">
             <Heading text={"Get In Touch With Us"} />
             <Muted>
-              We’d love to hear from you! Whether you have questions, need
-              assistance, or want to share your feedback, feel free to get in
-              touch.
+              <Balancer>
+                We’d love to hear from you! Whether you have questions, need
+                assistance, or want to share your feedback, feel free to get in
+                touch.
+              </Balancer>
             </Muted>
             <Muted>
-              Fill out the form below, email us, or give us a call. Our team is
-              here to help and will respond promptly!
+              <Balancer>
+                Fill out the form below, email us, or give us a call. Our team
+                is here to help and will respond promptly!
+              </Balancer>
             </Muted>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 gap-y-6">
+          <div className="grid grid-cols-2 gap-4 gap-y-6 text-center md:text-start">
             <div className="space-y-1">
               <H5 className={"text-secondary"}>Chat to us</H5>
               <Muted className="text-xs sm:text-sm">

@@ -154,7 +154,6 @@ export const whyChooseUs = [
     paragraph:
       "With a strong commitment to your security, we provide affordable and comprehensive insurance plans. Our team ensures that your needs are met with tailored coverage for long-term protection.",
   },
-
   {
     heading: "Insurance Made Simple and Secure",
     subheading: "Expertise",

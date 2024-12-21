@@ -40,7 +40,10 @@ export function Logos() {
           TRUSTED BY LEADING COMPANIES
         </h3>
         <div className="relative mt-6">
-          <Marquee className="max-w-full [--duration:40s]">
+          <Marquee
+            className="[--duration:40s] [--gap:0px] sm:[--gap:1rem]"
+            pauseOnHover
+          >
             {companies.map((company, idx) => (
               <Image
                 key={idx}
@@ -52,8 +55,8 @@ export function Logos() {
               />
             ))}
           </Marquee>
-          <div className="from-primary-100 pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r"></div>
-          <div className="from-primary-100 pointer-events-none absolute inset-y-0 right-0 h-full w-1/3 bg-gradient-to-l"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 h-full w-1/3 bg-gradient-to-r from-primary-100"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 h-full w-1/3 bg-gradient-to-l from-primary-100"></div>
         </div>
       </div>
     </section>

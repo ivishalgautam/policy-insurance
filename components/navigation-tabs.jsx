@@ -3,13 +3,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const tabs = [
-  { label: "Home", link: "/" },
-  { label: "About", link: "#" },
-  { label: "Policies", link: "/insurance" },
-  { label: "Contact Us", link: "/contact-us" },
-];
-
 const Tab = ({ tab, selected, setSelected }) => {
   return (
     <button
@@ -34,7 +27,7 @@ const Tab = ({ tab, selected, setSelected }) => {
   );
 };
 
-const NavigationTabs = () => {
+const NavigationTabs = ({ tabs }) => {
   const [selected, setSelected] = useState(tabs[0]);
   const pathname = usePathname();
   return (

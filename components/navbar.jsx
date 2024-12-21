@@ -12,20 +12,15 @@ import {
 import { HovermeButton } from "./ui/hover-me-button";
 import Logo from "./logo";
 import NavigationTabs from "./navigation-tabs";
+import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
-export const navList = [
-  {
-    label: "About Us",
-    href: "#",
-  },
-  {
-    label: "Why Choose Us",
-    href: "#",
-  },
-  {
-    label: "Services",
-    href: "#",
-  },
+export const tabs = [
+  { label: "Home", link: "/" },
+  { label: "About", link: "#" },
+  { label: "Policies", link: "/insurance" },
+  { label: "Contact Us", link: "/contact-us" },
 ];
 
 export default function Navbar() {
@@ -35,7 +30,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between gap-4 md:gap-12">
           <Logo />
           <nav className="hidden items-center justify-start text-sm lg:flex lg:gap-8 lg:text-base">
-            <NavigationTabs />
+            <NavigationTabs tabs={tabs} />
           </nav>
           <div className="ml-auto hidden sm:block">
             <CTA />
@@ -50,6 +45,7 @@ export default function Navbar() {
 }
 
 function MobileNav() {
+  const pathname = usePathname();
   return (
     <Sheet>
       <SheetTrigger>
@@ -64,16 +60,33 @@ function MobileNav() {
           <div className="!mt-8 space-y-4">
             <nav>
               <ul>
-                {navList.map((list, key) => (
-                  <li
-                    key={key}
-                    className="group block list-disc rounded-lg p-2 text-lg hover:bg-primary"
-                  >
-                    <Link href={list.href} className="group-hover:text-white">
-                      {list.label}
-                    </Link>
-                  </li>
-                ))}
+                {tabs.map((list, key) => {
+                  const selected =
+                    pathname === (list.link === "Home" ? "/" : list.link);
+                  return (
+                    <li
+                      key={key}
+                      className={cn(
+                        `relative rounded-md p-3 text-sm font-medium text-gray-500 transition-colors dark:hover:text-gray-100`,
+                        {
+                          "text-white": selected,
+                          "hover:text-gray-900": !selected,
+                        },
+                      )}
+                    >
+                      <Link href={list.link} className="group-hover:text-white">
+                        <span className="relative z-10">{list.label}</span>
+                      </Link>
+                      {selected && (
+                        <motion.span
+                          layoutId="tab"
+                          transition={{ type: "spring", duration: 0.4 }}
+                          className="absolute inset-0 z-0 rounded-md bg-secondary"
+                        ></motion.span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </nav>
             <div className="block sm:hidden">

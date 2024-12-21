@@ -35,7 +35,11 @@ export function TestimonialCard({
 
       <div className="flex w-full select-none items-center justify-start gap-5">
         <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+          <AvatarImage
+            src={"/images/avatar.jpg"}
+            alt="@shadcn"
+            loading="lazy"
+          />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
 

@@ -34,6 +34,7 @@ export default function InsuranceCard({
             </div>
 
             <Heading text={heading} />
+
             {paragraphs.map((para, ind) => (
               <p key={ind} className="text-sm">
                 <Balancer>{para}</Balancer>
@@ -53,6 +54,7 @@ export default function InsuranceCard({
               height={400}
               alt={heading}
               className="h-full w-full object-cover object-center"
+              priority
             />
           </figure>
         </div>

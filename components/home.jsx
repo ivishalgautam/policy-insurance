@@ -1,24 +1,30 @@
 import dynamic from "next/dynamic";
 const ContactSection = dynamic(() => import("@/components/contact-section"), {
   loading: () => "loading...",
+  ssr: false,
 });
 const FAQ = dynamic(() => import("@/components/faq"), {
   loading: () => "loading...",
+  ssr: false,
 });
 const Hero = dynamic(() => import("@/components/hero"), {
   loading: () => "loading...",
+  ssr: false,
 });
 const Insurances = dynamic(() => import("@/components/insurances"), {
   loading: () => "loading...",
+  ssr: false,
 });
 const Testimonials = dynamic(
   () => import("@/components/testimonials").then((data) => data.Testimonials),
   {
     loading: () => "loading...",
+    ssr: false,
   },
 );
 const WhyUs = dynamic(() => import("@/components/why-us"), {
   loading: () => "loading...",
+  ssr: false,
 });
 
 export default function Home() {

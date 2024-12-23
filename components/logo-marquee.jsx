@@ -1,34 +1,35 @@
+"use client";
 import { Marquee } from "@/components/ui/marquee";
 import Image from "next/image";
 
 const companies = [
   {
     name: "Google",
-    url: "https://res.cloudinary.com/eldoraui/image/upload/v1734066341/Google_fav2wl.svg",
+    url: "/images/logos/google.svg",
   },
   {
     name: "GitHub",
-    url: "https://res.cloudinary.com/eldoraui/image/upload/v1734066341/GitHub_honend.svg",
+    url: "/images/logos/github.svg",
   },
   {
     name: "Amazon",
-    url: "https://res.cloudinary.com/eldoraui/image/upload/v1734066178/Amazon_wckqtv.svg",
+    url: "/images/logos/amazon.svg",
   },
   {
     name: "Netflix",
-    url: "https://res.cloudinary.com/eldoraui/image/upload/v1734066179/Netflix_skrjyn.svg",
+    url: "/images/logos/netflix.svg",
   },
   {
     name: "YouTube",
-    url: "https://res.cloudinary.com/eldoraui/image/upload/v1734066180/YouTube_wknngk.svg",
+    url: "/images/logos/youtube.svg",
   },
   {
     name: "Instagram",
-    url: "https://res.cloudinary.com/eldoraui/image/upload/v1734066178/Instagram_mo5ttl.svg",
+    url: "/images/logos/instagram.svg",
   },
   {
     name: "Spotify",
-    url: "https://res.cloudinary.com/eldoraui/image/upload/v1734066180/Spotify_ocrrnm.svg",
+    url: "/images/logos/spotify.svg",
   },
 ];
 

@@ -67,7 +67,7 @@ export default function Hero() {
             <Link href={"/insurance"}>
               <FadeUp x={20}>
                 <Card bgGradient>
-                  <figure className="max-h-[466px] overflow-hidden rounded-3xl">
+                  <figure className="h-[466px] overflow-hidden rounded-3xl">
                     <Image
                       src={"/images/banner/2.jpeg"}
                       width={200}

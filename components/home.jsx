@@ -1,11 +1,12 @@
-import dynamic from "next/dynamic";
 import HeroSkeleton from "./skeletons/hero";
 import { lazy, Suspense } from "react";
 const Hero = lazy(() => import("@/components/hero"));
 const Insurances = lazy(() => import("@/components/insurances"));
 const WhyUs = lazy(() => import("@/components/why-us"));
-const Testimonials = dynamic(() =>
-  import("@/components/testimonials").then((data) => data.Testimonials),
+const Testimonials = lazy(() =>
+  import("@/components/testimonials").then((module) => ({
+    default: module.Testimonials,
+  })),
 );
 const ContactSection = lazy(() => import("@/components/contact-section"));
 const FAQ = lazy(() => import("@/components/faq"));
